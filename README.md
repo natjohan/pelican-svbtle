@@ -64,6 +64,19 @@ When developing locally, set the following variable:
 - A different Pygmentize theme can be used by editing `./Makefile` and
   running `make pygments`.
 
+## QUICK ADDED BY NATJOHAN
+twitter share button under articles
+font-awesome icons
+social links on sidebar 
+inspired by [fjavieralba](http://fjavieralba.com/) and his flasky theme, thank to him !
+Added global variables :
+- `REVERSE_MAIL_USERNAME` : juste reverse your username for a little javascript obfuscation (ie: totogtr => rtgotot)
+- `REVERSE_MAIL_HOST` : reverse like username example
+- `LINKEDIN_URL`
+- `GITHUB_URL`
+- `FLICKR_URL`
+- `TWITTER_USERNAME` : without @
+
 ## AUTHOR
 
 William Ting

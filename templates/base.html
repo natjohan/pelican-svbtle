@@ -6,6 +6,7 @@
 	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
 	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css" type="text/css"/>
 
 	<link href="{{ FEED_DOMAIN }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
 	{% if FEED_RSS %}
@@ -45,6 +46,32 @@
 			</ul>
 		</div>
 		<footer>
+			<div id="social" style="font-size: 20px;">
+				{% if REVERSE_MAIL_USERNAME and REVERSE_MAIL_HOST %}
+				  <script language="JavaScript">
+				    u = "{{ REVERSE_MAIL_USERNAME }}";
+				    s = "{{ REVERSE_MAIL_HOST }}";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				{% endif %}
+				{% if TWITTER_USERNAME %}
+				  <a href="http://twitter.com/{{ TWITTER_USERNAME }}" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				{% endif %}
+				{% if LINKEDIN_USERNAME %}
+				  <a href="{{ LINKEDIN_URL }}"><i class="icon-linkedin-sign icon-large" ></i></a>
+				{% endif %}
+				{% if GITHUB_URL %}
+				  <a href="{{ GITHUB_URL }}" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+				{% endif %}  
+				{% if FLICKR_URL %}
+				  <a href="{{ FLICKR_URL }}" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				{% endif %}
+				  <a href="{{ SITEURL }}/feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
 			<address>
 				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
 		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
